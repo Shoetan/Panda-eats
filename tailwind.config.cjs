@@ -14,7 +14,9 @@ module.exports = {
         primary: '#335145',
         secondary: '#638275',
         accent: '#3AACFF',
-        background: '#E8F3F5'
+        background: '#FBFCF8',
+        dark: '#050301',
+        white: '#FFFFFF'
       }
     },
   },
