@@ -15,19 +15,19 @@ const Header = () => {
         {/* nav links */}
 
         <div>
-            <ul className=' font-poppins text-xs hidden sm:flex text-dark'>
-                <li>HOME</li>
-                <li>HOW IT WORKS</li>
-                <li>ABOUT US</li>
-                <li>MENU</li>
+            <ul className=' font-poppins text-xs hidden sm:flex space-x-6 text-dark'>
+                <li className='hover:text-slate-500 cursor-pointer'>HOME</li>
+                <li className='hover:text-slate-500 cursor-pointer'>HOW IT WORKS</li>
+                <li className='hover:text-slate-500 cursor-pointer'>ABOUT US</li>
+                <li className='hover:text-slate-500 cursor-pointer'>MENU</li>
             </ul>
         </div>
 
         {/* shopping cart,avatar or hamburger menu based on the view */}
         <div className='flex items-center justify-center mr-4'>
-            <ShoppingBasketIcon className='text-dark cursor-pointer'/>
+            <ShoppingBasketIcon className='text-slate-900 cursor-pointer'/>
 
-            <div className='relative -top-3 right-3   rounded-full bg-red-700  w-5 h-5   flex items-center justify-center'>
+            <div className='relative -top-3 right-3   rounded-full bg-red-700  w-5 h-5 flex items-center justify-center'>
                 <p className='text-white text-xs'>10</p>
             </div> 
 
