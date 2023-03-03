@@ -1,6 +1,7 @@
 import logo from '../assets/Logo.png';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Avatar } from '@mui/material';
+import {Link} from 'react-router-dom'
 
 const Header = () => {
     return (
@@ -15,10 +16,12 @@ const Header = () => {
         {/* nav links */}
 
         <div>
-            <ul className=' font-poppins text-xs hidden sm:flex space-x-6 text-dark'>
+            <ul className=' font-poppins text-sm hidden sm:flex space-x-6 text-dark'>
                 <li className='hover:text-slate-500 cursor-pointer'>HOME</li>
                 <li className='hover:text-slate-500 cursor-pointer'>HOW IT WORKS</li>
-                <li className='hover:text-slate-500 cursor-pointer'>ABOUT US</li>
+                <Link to='/about'>
+                    <li className='hover:text-slate-500 cursor-pointer'>ABOUT US</li>
+                </Link>
                 <li className='hover:text-slate-500 cursor-pointer'>MENU</li>
             </ul>
         </div>
@@ -27,8 +30,8 @@ const Header = () => {
         <div className='flex items-center justify-center mr-4'>
             <ShoppingBasketIcon className='text-slate-900 cursor-pointer'/>
 
-            <div className='relative -top-3 right-3   rounded-full bg-red-700  w-5 h-5 flex items-center justify-center'>
-                <p className='text-white text-xs'>10</p>
+            <div className='relative -top-3.5 right-3   rounded-full bg-red-700  w-5 h-5 flex items-center justify-center'>
+                <p className='text-white text-xs'>0</p>
             </div> 
 
             <Avatar
