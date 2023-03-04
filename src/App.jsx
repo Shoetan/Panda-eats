@@ -3,6 +3,7 @@ import Hero from "./components/Hero"
 
 import {Routes,Route } from "react-router-dom"
 import About from '../src/pages/About'
+import HowItWorks from "./components/HowItWorks"
 function App () {
   
 
@@ -14,6 +15,7 @@ function App () {
    </Routes>
         <Header/>
         <Hero/>
+        <HowItWorks/>
 
    </div>
 

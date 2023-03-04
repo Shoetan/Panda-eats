@@ -18,11 +18,12 @@ const Header = () => {
         <div>
             <ul className=' font-poppins text-sm hidden sm:flex space-x-6 text-dark'>
                 <li className='hover:text-slate-500 cursor-pointer'>HOME</li>
-                <li className='hover:text-slate-500 cursor-pointer'>HOW IT WORKS</li>
-                <Link to='/about'>
-                    <li className='hover:text-slate-500 cursor-pointer'>ABOUT US</li>
-                </Link>
+
+                <li className='hover:text-slate-500 cursor-pointer'>HOW TO ORDER</li>
+
                 <li className='hover:text-slate-500 cursor-pointer'>MENU</li>
+                
+                <li className='hover:text-slate-500 cursor-pointer'>ABOUT US</li>
             </ul>
         </div>
 
