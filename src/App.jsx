@@ -4,6 +4,8 @@ import Hero from "./components/Hero"
 import {Routes,Route } from "react-router-dom"
 import About from '../src/pages/About'
 import HowItWorks from "./components/HowItWorks"
+import Menu from "./pages/Menu"
+
 function App () {
   
 
@@ -16,6 +18,7 @@ function App () {
         <Header/>
         <Hero/>
         <HowItWorks/>
+        <Menu/>
 
    </div>
 
