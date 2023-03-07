@@ -14,17 +14,17 @@ const HowItWorks = () => {
 
                 {/* Create three divs to each step on how to order */}
                 <div className='container mx-auto flex mt-8 p-8 justify-around'>
-                    <div className='flex items-center justify-center flex-col'>
+                    <div className='flex items-center justify-center flex-col hover:scale-125'>
                         <img src={location} alt="Pick your location" className='h-12 w-12 md:h-28 md:w-28'/>
                         <h3 className='font-poppins p-4 text-xs font-semibold md:text-sm'>Pick your location</h3>
                     </div>
 
-                    <div className='flex flex-col items-center justify-center'>
+                    <div className='flex flex-col items-center justify-center hover:scale-125'>
                         <img src={order} alt="An order confirmation" className='h-12 w-12 md:h-28 md:w-28' />
                         <h3 className='font-poppins p-4 text-xs font-semibold md:text-sm'>place your order</h3>
                     </div>
 
-                    <div className='flex flex-col items-center justify-center'>
+                    <div className='flex flex-col items-center justify-center hover:scale-125'>
                         <img src={delivery} alt="A Food delivery van" className='h-12 w-12 md:h-28 md:w-28' />
                         <h3 className='font-poppins p-4 text-xs font-semibold md:text-sm'>Food is on it's way</h3>
                     </div>

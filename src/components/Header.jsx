@@ -36,8 +36,9 @@ const Header = () => {
             </div> 
 
             <Avatar
-             sx={{ width: 24, height: 24 }} 
+             sx={{ width: 24, height: 24 }} className='p-4'
             >
+            E
             </Avatar>
             
         </div>
