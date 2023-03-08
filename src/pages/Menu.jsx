@@ -18,35 +18,41 @@ const Menu = () => {
             </div>
 
 
-            <div className=' container flex flex-col mx-auto justify-between mt-8 p-8 border md:grid grid-cols-3 gap-8'>
-                <div className='flex flex-col items-center justify-center'>
+            <div className=' container flex flex-col mx-auto justify-between mt-8 p-8 md:grid grid-cols-3 gap-8'>
+                <div className='flex flex-col items-center justify-center cursor-pointer hover:opacity-90'>
                     <img src={food2} alt="Salmon dish" className='h-44 w-36 object-cover' />
-                    <h3></h3>
+                    <span className='font-poppins text-sm'>Salmon Fillet</span>
+                    <span className='font-poppins'>NGN 500</span >
                 </div>
 
-                <div className='flex flex-col items-center justify-center'>
+                <div className='flex flex-col items-center justify-center cursor-pointer hover:opacity-80'>
                     <img src={food3} alt=""  className='h-44 w-36 object-cover'/>
-                    <h3></h3>
+                    <span className='font-poppins text-xs'>Veggie Bowl</span>
+                    <span className='font-poppins'>NGN 500</span>
                 </div>
 
-                <div className='flex flex-col items-center justify-center'>
+                <div className='flex flex-col items-center justify-center cursor-pointer hover:opacity-80'>
                     <img src={food4} alt="" className='h-44 w-36 object-cover'/>
-                    <p></p>
+                    <span className='font-poppins text-xs'>Chicken Wings</span>
+                    <span className='font-poppins' >NGN 500</span >
                 </div>
 
-                <div className='flex flex-col items-center justify-center'>
+                <div className='flex flex-col items-center justify-center cursor-pointer hover:opacity-80'>
                     <img src={food5} alt="" className='h-44 w-36 object-cover' />
-                    <p></p>
+                    <span className='font-poppins text-xs'>Grilled Potatoes</span>
+                    <span className='font-poppins' >NGN 500</span >
                 </div>
 
-                <div className='flex flex-col items-center justify-center'>
+                <div className='flex flex-col items-center justify-center cursor-pointer hover:opacity-80'>
                     <img src={food6} alt="" className='h-44 w-36 object-cover'/>
-                    <p></p>
+                    <span className='font-poppins text-xs'>Butter Salmon Curry</span>
+                    <span className='font-poppins'>NGN 500</span >
                 </div>
 
-                <div className='flex flex-col items-center justify-center'>
+                <div className='flex flex-col items-center justify-center cursor-pointer hover:opacity-80'>
                     <img src={food7} alt=""  className='h-44 w-36 object-cover'/>
-                    <p></p>
+                    <span className='font-poppins text-xs'>Pasta Rigotoni </span>
+                    <span className='font-poppins' >NGN 500</span >
                 </div>
             </div>
         </div>
