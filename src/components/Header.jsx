@@ -32,7 +32,7 @@ const Header = () => {
             <ShoppingBasketIcon className='text-slate-900 cursor-pointer'/>
 
             <div className='relative -top-3.5 right-3   rounded-full bg-red-700  w-5 h-5 flex items-center justify-center'>
-                <p className='text-white text-xs'>0</p>
+                <p className='text-white text-xs'>0</p> 
             </div> 
 
             <Avatar
