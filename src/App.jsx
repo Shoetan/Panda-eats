@@ -19,6 +19,7 @@ function App () {
         <Hero/>
         <HowItWorks/>
         <Menu/>
+        <About/>
 
    </div>
 

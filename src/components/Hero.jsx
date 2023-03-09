@@ -7,20 +7,20 @@ const Hero = () => {
         <div>
 
            {/* This div will define the dimension of the hero section and every element in this hero section will fall into this div */}
-            <div className="container m-auto rounded-3xl border bg-gradient-to-r from-secondary to-dark md:p-2">
+            <div className="container mx-auto flex flex-col rounded-3xl border bg-gradient-to-r from-secondary to-dark md:p-2">
 
-             <div className=' mt-12 flex flex-col items-center justify-center md:flex-row md:justify-around'>
+                <div className=' mt-12 flex flex-col items-center justify-center md:flex-row md:justify-around'>
 
-                {/* Hero section text  */}
-                <div className='flex flex-col p-4 -mt-14 -mb-12'>
-                    <h1 className='text-background font-poppins leading-tight text-xl mb-6  md:text-4xl w-5/6 '>CHOOSE THE BEST FRESHLY COOKED FOOD</h1>
-                    <p className='text-background font-poppins text-sm mb-8 md:w-3/6 md:text-xl'>Just confirm your order and enjoy our tasty meal.</p>
-                </div>
-             
-                {/* Hero Image div */}
-                <div className='flex items-center justify-center md:-mb-16'>
-                    <img src={food1} alt="" className=' w-3/6 lg:w-5/6 md:w-6/6 mb-10  object-cover object-center'/>
-                </div>
+                    {/* Hero section text  */}
+                    <div className='flex flex-col p-4 -mt-14 -mb-12'>
+                        <h1 className='text-background font-poppins leading-tight text-xl mb-6  md:text-4xl w-5/6 '>CHOOSE THE BEST FRESHLY COOKED FOOD</h1>
+                        <p className='text-background font-poppins text-sm mb-8 md:w-3/6 md:text-xl'>Just confirm your order and enjoy our tasty meal.</p>
+                    </div>
+                
+                    {/* Hero Image div */}
+                    <div className='flex items-center justify-center md:-mb-16'>
+                        <img src={food1} alt="" className=' w-3/6 lg:w-5/6 md:w-6/6 mb-10  object-cover object-center'/>
+                    </div>
 
              </div>
 
