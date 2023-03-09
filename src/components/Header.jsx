@@ -17,8 +17,7 @@ const Header = () => {
 
         <div>
             <ul className=' font-poppins text-sm hidden sm:flex space-x-6 text-dark'>
-                <li className='hover:text-slate-500 cursor-pointer'>HOME</li>
-
+                
                 <li className='hover:text-slate-500 cursor-pointer'>HOW TO ORDER</li>
 
                 <li className='hover:text-slate-500 cursor-pointer'>MENU</li>
@@ -35,12 +34,6 @@ const Header = () => {
                 <p className='text-white text-xs'>0</p> 
             </div> 
 
-            <Avatar
-             sx={{ width: 24, height: 24 }} className='p-4'
-            >
-            E
-            </Avatar>
-            
         </div>
 
     </div>  

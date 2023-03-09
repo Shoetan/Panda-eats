@@ -5,6 +5,7 @@ import {Routes,Route } from "react-router-dom"
 import About from '../src/pages/About'
 import HowItWorks from "./components/HowItWorks"
 import Menu from "./pages/Menu"
+import Footer from "./components/Footer"
 
 function App () {
   
@@ -20,6 +21,7 @@ function App () {
         <HowItWorks/>
         <Menu/>
         <About/>
+        <Footer/>
 
    </div>
 
