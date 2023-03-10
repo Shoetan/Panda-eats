@@ -27,7 +27,7 @@ const Hero = () => {
 
                 {/* Hero section call to action */}
                 <div className='flex space-x-8 font-poppins p-8 md:flex-row '>
-                    <button className='rounded full w-48 bg-primary p-2 text-white hover:opacity-80'>Order now</button>
+                    <button className='rounded full w-48 bg-primary p-2 text-white hover:opacity-80'>How To Order</button>
                     <button className='rounded full w-48 bg-white text-primary border border-primary p-2  hover:opacity-80'>See menu</button>
                 </div>
 
