@@ -11,7 +11,7 @@ const Header = () => {
 
     return (
         
-    <div className=' container flex mx-auto justify-between items-center -mt-6'>
+    <div className='sticky top-0 z-30 bg-background flex mx-auto justify-between items-center -mt-6 mb-6'>
 
         {/* restaurant Logo */}
         <div>
