@@ -13,6 +13,7 @@ export const counterSlice = createSlice({
     
     reducers :{
         increaseCount: (state) =>{
+            
             state.value +=1
         },
 
