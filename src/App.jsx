@@ -4,6 +4,8 @@ import About from '../src/pages/About'
 import HowItWorks from "./components/HowItWorks"
 import Menu from "./pages/Menu"
 import Footer from "./components/Footer"
+import MenuContainer from "./components/MenuContainer"
+
 
 function App () {
   
@@ -15,6 +17,7 @@ function App () {
         <Hero/>
         <HowItWorks/>
         <Menu/>
+        <MenuContainer/>
         <About/>
         <Footer/>
 
