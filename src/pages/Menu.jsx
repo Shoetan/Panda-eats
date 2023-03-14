@@ -18,12 +18,6 @@ const Menu = () => {
 
         <div>
             
-            <div className="flex flex-col items-center justify-center font-poppins mt-10 text-dark">
-                <h2 className="text-3xl p-4 ">Menu</h2>
-                <h4 className="text-sm opacity-90">Pick from below</h4>
-            </div>
-
-
             <div className='container flex flex-col mx-auto justify-between mt-8 p-8 md:grid grid-cols-3 gap-8'>
                 <div className='flex flex-col items-center justify-center cursor-pointer'>
                     <img src={food2} alt="Salmon dish" className='h-44 w-36  object-cover ' />
