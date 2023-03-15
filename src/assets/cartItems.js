@@ -4,7 +4,7 @@ const cartItems = [
         id:'1',
         title: 'Salmon Fillet',
         price: '3500',
-        img:'https://imgbox.com/otTO576R',
+        image:'https://imgbox.com/otTO576R',
         amount: 1,
 
     },
@@ -13,7 +13,7 @@ const cartItems = [
         id:'2',
         title: 'Veggie Bowl',
         price: '1200',
-        img:'https://imgbox.com/pWHrAEOC',
+        image:'https://imgbox.com/pWHrAEOC',
         amount: 1,
 
     },
@@ -22,7 +22,7 @@ const cartItems = [
         id:'3',
         title: 'Chicken Wings',
         price: '2200',
-        img:'https://imgbox.com/FpA7Aukw',
+        image:'https://imgbox.com/FpA7Aukw',
         amount: 1,
 
     },
@@ -31,7 +31,7 @@ const cartItems = [
         id:'4',
         title: 'Grilled Potatoes',
         price: '1500',
-        img:'https://imgbox.com/Iiq8PSbZ',
+        image:'https://imgbox.com/Iiq8PSbZ',
         amount: 1,
 
     },
@@ -40,7 +40,7 @@ const cartItems = [
         id:'5',
         title: 'Butter Salmon Curry',
         price: '4300',
-        img:'https://imgbox.com/UVejey57',
+        image:'https://imgbox.com/UVejey57',
         amount: 1,
 
     },
@@ -49,7 +49,7 @@ const cartItems = [
         id:'6',
         title: 'Pasta Rigotoni',
         price: '5500',
-        img:'https://imgbox.com/aEW3605S',
+        image:'https://imgbox.com/aEW3605S',
         amount: 1,
 
     }
