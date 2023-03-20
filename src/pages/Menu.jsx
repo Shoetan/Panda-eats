@@ -1,7 +1,9 @@
+import { Plus } from "../icons";
 
-import { Plus } from '../icons'
+import { useDispatch } from 'react-redux'
+import { increaseCount } from '../features/counter/counterSlice'
 
-const Menu = ({id , title, price, image, amount, action}) => {
+const Menu = ({title, price, image, action}) => {
      
     
 
@@ -19,9 +21,10 @@ const Menu = ({id , title, price, image, amount, action}) => {
                     <img src={image} alt={title} className='h-44 w-36  object-cover ' />
                     <span className='font-poppins text-sm'>{title}</span>
                     <div className='    space-x-4 text-center mt-4 flex items-center justify-center'>
-                        <span className='font-poppins'>NGN {price}</span >  
-                         <button disabled="disabled" onClick={()=>{action()}}>+</button>   
+                        <span className='font-poppins'>NGN {price}</span >   
+                        <Plus onClick = {()=>{console.log('first')}}/> 
                     </div>
+                    
                 </div>
 
               

@@ -4,11 +4,13 @@ import { useDispatch } from 'react-redux'
 import { increaseCount } from '../features/counter/counterSlice'
 
 
+
 const MenuContainer = () => {
+
     const dispatch = useDispatch()
 
-    const handleClick =() =>{
-        dispatch(increaseCount())
+    const handleClick = () =>{
+       dispatch(increaseCount())
     }
 
 
@@ -23,7 +25,7 @@ const MenuContainer = () => {
 
         
 
-        {/* fetch the data of the api here and use the map function to loop throught the json array and supply that as the probs to the menu components */}
+        {/* get the data of the items from the cartItems.js file and map through them afterward destructure the  new array to get individual elements of the array */}
 
         <div className="container flex flex-col mx-auto justify-between mt-8 p-8 md:grid grid-cols-3 gap-8">
                 {  cartItems.map(cartItem =>{
@@ -37,7 +39,8 @@ const MenuContainer = () => {
                         price={price}
                         image ={image}
                         amount = {amount}
-                        action ={handleClick}
+                        action = {handleClick}
+                        
                         
                     />
 
@@ -45,6 +48,8 @@ const MenuContainer = () => {
                 
                 })  
                 }
+
+                
         </div>
 
 

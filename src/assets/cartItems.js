@@ -4,7 +4,7 @@ const cartItems = [
         id:'1',
         title: 'Salmon Fillet',
         price: '3500',
-        image:'https://imgbox.com/otTO576R',
+        image:'https://res.cloudinary.com/duqtywh06/image/upload/v1679323379/panda%20eats/food2_olt8oc.png',
         amount: 1,
 
     },
@@ -13,7 +13,7 @@ const cartItems = [
         id:'2',
         title: 'Veggie Bowl',
         price: '1200',
-        image:'https://imgbox.com/pWHrAEOC',
+        image:'https://res.cloudinary.com/duqtywh06/image/upload/v1679323380/panda%20eats/food7_hloat7.png',
         amount: 1,
 
     },
@@ -22,7 +22,7 @@ const cartItems = [
         id:'3',
         title: 'Chicken Wings',
         price: '2200',
-        image:'https://imgbox.com/FpA7Aukw',
+        image:'https://res.cloudinary.com/duqtywh06/image/upload/v1679323379/panda%20eats/food4_vpwzjw.png',
         amount: 1,
 
     },
@@ -31,7 +31,7 @@ const cartItems = [
         id:'4',
         title: 'Grilled Potatoes',
         price: '1500',
-        image:'https://imgbox.com/Iiq8PSbZ',
+        image:'https://res.cloudinary.com/duqtywh06/image/upload/v1679323379/panda%20eats/food5_jhvsmr.png',
         amount: 1,
 
     },
@@ -40,7 +40,7 @@ const cartItems = [
         id:'5',
         title: 'Butter Salmon Curry',
         price: '4300',
-        image:'https://imgbox.com/UVejey57',
+        image:'https://res.cloudinary.com/duqtywh06/image/upload/v1679323379/panda%20eats/food6_k4g8eh.png',
         amount: 1,
 
     },
@@ -49,7 +49,7 @@ const cartItems = [
         id:'6',
         title: 'Pasta Rigotoni',
         price: '5500',
-        image:'https://imgbox.com/aEW3605S',
+        image:'https://res.cloudinary.com/duqtywh06/image/upload/v1679323380/panda%20eats/food7_hloat7.png',
         amount: 1,
 
     }
