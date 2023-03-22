@@ -21,8 +21,15 @@ export const counterSlice = createSlice({
             
             /**
              * ! Add an if statement here to check if the count is greater than zero minus one or stop minus if count is zero
+             * 
+             * 
              */
-            state.value -=1
+
+            if (state.value > 0 ) {
+                
+                state.value -=1
+
+            }
         }
     }
 })

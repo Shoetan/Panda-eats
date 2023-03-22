@@ -1,16 +1,22 @@
 import Menu from "../pages/Menu"
 import cartItems from "../assets/cartItems"
 import { useDispatch } from 'react-redux'
-import { increaseCount } from '../features/counter/counterSlice'
+import { decreaseCount, increaseCount } from '../features/counter/counterSlice'
 
 
 
 const MenuContainer = () => {
 
+
+    //handy man to carry out  an action on the redux store
     const dispatch = useDispatch()
 
     const handleClick = () =>{
        dispatch(increaseCount())
+    }
+
+    const remove = () =>{
+        dispatch(decreaseCount())
     }
 
 
@@ -40,6 +46,7 @@ const MenuContainer = () => {
                         image ={image}
                         amount = {amount}
                         action = {handleClick}
+                        diction = {remove}
                         
                         
                     />

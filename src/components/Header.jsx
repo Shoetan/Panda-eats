@@ -34,7 +34,9 @@ const Header = () => {
 
         {/* shopping cart,avatar or hamburger menu based on the view */}
         <div className='flex items-center justify-center mr-4'>
-                    <CartIcon/>
+                                    <div className='cursor-pointer' onClick={()=>{console.log("object");}}>
+                                        <CartIcon/>
+                                    </div>
             
             <div className='relative -top-3.5 right-3   rounded-full bg-red-700  w-5 h-5 flex items-center justify-center'>
                 <p className='text-white text-xs'> { count }</p> 
