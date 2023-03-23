@@ -8,12 +8,13 @@ import { isOpen } from '../features/checkout/checkoutSlice';
 
 const Header = () => {
 
+
+
+        // get the current value of the state from the store
     const count = useSelector((state) =>state.counter.value)
 
+     // calling in the handy man to do the job of carrying out some functions
     const dispatch = useDispatch()
-
-
-
 
 
     return (
