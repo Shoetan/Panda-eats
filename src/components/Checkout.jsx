@@ -1,9 +1,7 @@
-import { useState } from "react";
-
 
 const Checkout = () => {
 
-    const [showModal , setShowModal] = useState(true)
+    
 
     return ( 
         <div> 
