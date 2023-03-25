@@ -1,6 +1,6 @@
 import logo from '../assets/Logo.png';
 import  { useSelector} from 'react-redux'
-import { CartIcon } from '../icons';
+import { CartIcon, Avatar } from '../icons';
 
 import { useDispatch } from 'react-redux';
 import { isOpen } from '../features/checkout/checkoutSlice';
@@ -50,6 +50,10 @@ const Header = () => {
             <div className='relative -top-3.5 right-3   rounded-full bg-red-700  w-5 h-5 flex items-center justify-center'>
                 <p className='text-white text-xs'> { count }</p> 
             </div> 
+
+            <div className='cursor-pointer'>
+                <Avatar/>
+            </div>
 
         </div>
 
