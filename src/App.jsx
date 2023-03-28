@@ -5,23 +5,26 @@ import HowItWorks from "./components/HowItWorks"
 import Footer from "./components/Footer"
 import MenuContainer from "./components/MenuContainer"
 import Checkout from "./components/Checkout"
-
+import { AnimatePresence } from "framer-motion"
 
 function App () {
   
 
   return (
-   <div className="" >
 
-        <Header/>
-        <Hero/>
-        <HowItWorks/>
-        <MenuContainer/>
-        <About/>
-        <Checkout/>
-        <Footer/>
-
-   </div>
+    <AnimatePresence>
+        <div className="" >
+    
+            <Header/>
+            <Hero/>
+            <HowItWorks/>
+            <MenuContainer/>
+            <About/>
+            <Checkout/>
+            <Footer/>
+    
+        </div>
+    </AnimatePresence>
 
   )
 }

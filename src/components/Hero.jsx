@@ -1,4 +1,5 @@
 import food1 from '../assets/food1.png'
+import { motion } from 'framer-motion';
 
 const Hero = () => {
     return ( 
@@ -27,8 +28,10 @@ const Hero = () => {
 
                 {/* Hero section call to action */}
                 <div className='flex space-x-8 font-poppins p-8 md:flex-row '>
-                    <button className='rounded full w-48 bg-primary p-2 text-white hover:opacity-80'>How To Order</button>
-                    <button className='rounded full w-48 bg-white text-primary border border-primary p-2  hover:opacity-80'>See menu</button>
+
+                    <motion.button whileTap={{scale:0.8}}    className='rounded full w-48 bg-primary p-2 text-white hover:opacity-80'>How To Order</motion.button>
+
+                    <motion.button whileTap={{scale:0.8}} className='rounded full w-48 bg-white text-primary border border-primary p-2  hover:opacity-80'>See menu</motion.button>
                 </div>
 
             </div>
