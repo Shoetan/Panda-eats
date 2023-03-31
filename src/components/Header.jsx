@@ -17,6 +17,12 @@ const Header = () => {
      // calling in the handy man to do the job of carrying out some functions
     const dispatch = useDispatch()
 
+    //create sample function here
+
+    const display =() =>{
+        console.log('This is the second function rendering');
+    }
+
 
     return (
         
@@ -44,7 +50,10 @@ const Header = () => {
         {/* shopping cart,avatar or hamburger menu based on the view */}
         <div className='flex items-center justify-center mr-4'>
 
-                 <motion.div whileTap={{scale:0.6}} className='cursor-pointer' onClick={()=>{dispatch(isOpen())}}>
+                 <motion.div whileTap={{scale:0.6}} className='cursor-pointer' onClick={()=>{
+                    dispatch(isOpen());
+                    display()
+                }}>
                      <CartIcon/>
                  </motion.div>
             

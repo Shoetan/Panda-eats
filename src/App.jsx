@@ -4,7 +4,6 @@ import About from '../src/pages/About'
 import HowItWorks from "./components/HowItWorks"
 import Footer from "./components/Footer"
 import MenuContainer from "./components/MenuContainer"
-import Checkout from "./components/Checkout"
 import { AnimatePresence } from "framer-motion"
 
 function App () {
@@ -20,7 +19,6 @@ function App () {
             <HowItWorks/>
             <MenuContainer/>
             <About/>
-            <Checkout/>
             <Footer/>
     
         </div>
