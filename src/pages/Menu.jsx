@@ -1,8 +1,19 @@
-import { Minus, Plus } from "../icons";
+import {Plus } from "../icons";
 
-const Menu = ({title, price, image, action, diction}) => {
+import { motion } from "framer-motion";
+
+import { useDispatch } from "react-redux";
+
+import { setId } from "../features/foodorder/foodOrderSlice";
+
+const Menu = ({title, price, image, increaseCount,id}) => {
      
-    
+    const dispatch = useDispatch()
+
+
+    const pushIdToArray = () =>{
+        dispatch(setId(id))
+    }
 
     return ( 
 
@@ -21,9 +32,13 @@ const Menu = ({title, price, image, action, diction}) => {
                     <div className='space-x-4 text-center mt-4 flex items-center justify-center '>
                         <span className='font-poppins'>NGN {price}</span > 
 
-                        <div onClick={()=>{action()}} className='hover:scale-125'>
+                        <motion.div whileTap={{scale:0.6}} onClick={()=>{
+                            increaseCount()
+                            pushIdToArray()
+                        }} className='hover:scale-125'>
                             <Plus/> 
-                        </div>  
+                            
+                        </motion.div>  
                      
                     </div>
                     

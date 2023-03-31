@@ -1,7 +1,8 @@
 import Menu from "../pages/Menu"
 import cartItems from "../assets/cartItems"
 import { useDispatch } from 'react-redux'
-import { decreaseCount, increaseCount } from '../features/counter/counterSlice'
+import { increaseCount } from '../features/counter/counterSlice'
+
 
 
 
@@ -11,13 +12,14 @@ const MenuContainer = () => {
     //handy man to carry out  an action on the redux store
     const dispatch = useDispatch()
 
-    const handleClick = () =>{
+    // Incremental function to increment
+    const increaseCounter = () =>{
        dispatch(increaseCount())
     }
 
-    const remove = () =>{
-        dispatch(decreaseCount())
-    }
+    
+
+   
 
 
   return (
@@ -29,6 +31,7 @@ const MenuContainer = () => {
             <h4 className="text-sm opacity-90">Pick from below</h4>
         </div>
 
+    
         
 
         {/* get the data of the items from the cartItems.js file and map through them afterward destructure the  new array to get individual elements of the array */}
@@ -45,8 +48,8 @@ const MenuContainer = () => {
                         price={price}
                         image ={image}
                         amount = {amount}
-                        action = {handleClick}
-                        diction = {remove}
+                        increaseCount = {increaseCounter}
+                        id = {id}
                         
                         
                     />

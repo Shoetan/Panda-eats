@@ -20,7 +20,7 @@ export const counterSlice = createSlice({
         decreaseCount: (state) =>{
             
             /**
-             * ! Add an if statement here to check if the count is greater than zero minus one or stop minus if count is zero
+             * ! Add an if statement here to check if the count is greater than zero then go ahead to minus one or stop minus if count is zero
              * 
              * 
              */
