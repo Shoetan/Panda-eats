@@ -10,7 +10,7 @@ const Menu = ({title, price, image, increaseCount,id}) => {
      
     const dispatch = useDispatch()
 
-
+    //This is the function that calls on the setID reducers from the redux store. It takes in a parameter or payload of id which is a prop
     const pushIdToArray = () =>{
         dispatch(setId(id))
     }

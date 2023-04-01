@@ -1,11 +1,18 @@
 import logo from '../assets/Logo.png';
-import  { useSelector} from 'react-redux'
+import { useSelector} from 'react-redux'
 import { CartIcon } from '../icons';
 import { Avatar } from '@mui/material';
 
 import { useDispatch } from 'react-redux';
 import { isOpen } from '../features/checkout/checkoutSlice';
 import { motion } from 'framer-motion';
+import Dropdown from './Dropmenu';
+
+import { signInWithPopup } from 'firebase/auth';
+
+import { auth , provider} from '../firebase/firbase'
+
+import { useState } from 'react';
 
 const Header = () => {
 
@@ -17,12 +24,14 @@ const Header = () => {
      // calling in the handy man to do the job of carrying out some functions
     const dispatch = useDispatch()
 
-    //create sample function here
 
-    const display =() =>{
-        console.log('This is the second function rendering');
+    //state to manage the dropdown menu 
+    const [isShow, setIsShow] = useState('')
+
+    //function to toggle the simple dropdown menu 
+    const showDropdown = () =>{
+        setIsShow(!isShow)
     }
-
 
     return (
         
@@ -52,7 +61,7 @@ const Header = () => {
 
                  <motion.div whileTap={{scale:0.6}} className='cursor-pointer' onClick={()=>{
                     dispatch(isOpen());
-                    display()
+                    
                 }}>
                      <CartIcon/>
                  </motion.div>
@@ -61,9 +70,23 @@ const Header = () => {
                 <p className='text-white text-xs'> { count }</p> 
             </div> 
 
-            <motion.div whileTap={{scale:0.6 }} className='cursor-pointer'>
-                <Avatar/> 
-            </motion.div>
+            <div className='flex flex-col items-center justify-center'>
+                <motion.div whileTap={{scale:0.6 }} className='cursor-pointer'
+                onClick={() =>{
+                    showDropdown()
+                }}>
+                    <Avatar/> 
+                </motion.div>
+
+                {/* using the tenary operation to display a simple dropdowm menu depending on the state  */}
+
+                {
+                    isShow ? (<Dropdown/>) :
+                    null 
+                }
+
+            </div>
+
 
         </div>
 
