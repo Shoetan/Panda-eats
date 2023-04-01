@@ -2,17 +2,15 @@ import logo from '../assets/Logo.png';
 import { useSelector} from 'react-redux'
 import { CartIcon } from '../icons';
 import { Avatar } from '@mui/material';
-
 import { useDispatch } from 'react-redux';
 import { isOpen } from '../features/checkout/checkoutSlice';
 import { motion } from 'framer-motion';
 import Dropdown from './Dropmenu';
-
-import { signInWithPopup } from 'firebase/auth';
-
-import { auth , provider} from '../firebase/firbase'
-
 import { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { auth } from '../firebase/firbase';
+
+
 
 const Header = () => {
 
@@ -31,6 +29,15 @@ const Header = () => {
     //function to toggle the simple dropdown menu 
     const showDropdown = () =>{
         setIsShow(!isShow)
+        
+    }
+    
+    // get the credentials of the current logged in user 
+    const [user] = useAuthState(auth)
+
+
+    const showUser = () => {
+      console.log();
     }
 
     return (
@@ -60,7 +67,8 @@ const Header = () => {
         <div className='flex items-center justify-center mr-4'>
 
                  <motion.div whileTap={{scale:0.6}} className='cursor-pointer' onClick={()=>{
-                    dispatch(isOpen());
+                    dispatch(isOpen())
+                    
                     
                 }}>
                      <CartIcon/>
@@ -74,8 +82,9 @@ const Header = () => {
                 <motion.div whileTap={{scale:0.6 }} className='cursor-pointer'
                 onClick={() =>{
                     showDropdown()
+                    showUser()
                 }}>
-                    <Avatar/> 
+                    <Avatar />
                 </motion.div>
 
                 {/* using the tenary operation to display a simple dropdowm menu depending on the state  */}
