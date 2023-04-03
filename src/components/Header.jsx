@@ -35,10 +35,12 @@ const Header = () => {
     // get the credentials of the current logged in user 
     const [user] = useAuthState(auth)
 
+    //destructure user credentials from firebase using the auth state hook from reach firebase hooks
 
-    const showUser = () => {
-      console.log();
-    }
+    const {photoURL} = user
+
+
+ 
 
     return (
         
@@ -84,7 +86,11 @@ const Header = () => {
                     showDropdown()
                     showUser()
                 }}>
-                    <Avatar />
+                    <Avatar 
+                        sx={{width:30, height:30}}
+                        src={photoURL}
+
+                    ></Avatar>
                 </motion.div>
 
                 {/* using the tenary operation to display a simple dropdowm menu depending on the state  */}
