@@ -21,18 +21,19 @@ const Dropdown = () => {
     const signOutUser = () => {
        signOut(auth)
         .then((result) => {
-            console.log(result);
+            alert('Logged out successfully');
+
         })
 
         .catch ((err) => {
-            console.log(err.message);
+            alert(err.message);
         })
     }
 
     return ( 
         <div>
                      {/*Drop down Menu*/}
-                     <div className='border px-4 py-2 rounded-lg bg-gray-300 text-slate-700 flex items-center justify-center'>
+                     <div className='w-36 border px-4 py-2 rounded-lg bg-gray-300 text-slate-700 flex flex-col absolute top-24 right-0 '>
                         <ul>
                             <li><a href="#"className='font-poppins text-sm hover:opacity-90'onClick={signInUser}>Login</a></li>
                             <li><a href="#"className='font-poppins text-sm hover:opacity-90'onClick={signOutUser}>Logout</a></li>
