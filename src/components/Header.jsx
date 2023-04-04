@@ -32,15 +32,10 @@ const Header = () => {
         
     }
     
-    // get the credentials of the current logged in user 
+    // get the credentials of the current logged in user from firebase using the firebase react hooks
+
     const [user] = useAuthState(auth)
-
-    //destructure user credentials from firebase using the auth state hook from reach firebase hooks
-
-    const {photoURL} = user
-
-
- 
+    
 
     return (
         
@@ -62,6 +57,7 @@ const Header = () => {
                 <li className='hover:text-slate-500 cursor-pointer'>MENU</li>
                 
                 <li className='hover:text-slate-500 cursor-pointer'>ABOUT US</li>
+                
             </ul>
         </div>
 
@@ -70,6 +66,7 @@ const Header = () => {
 
                  <motion.div whileTap={{scale:0.6}} className='cursor-pointer' onClick={()=>{
                     dispatch(isOpen())
+                    
                     
                     
                 }}>
@@ -84,13 +81,26 @@ const Header = () => {
                 <motion.div whileTap={{scale:0.6 }} className='cursor-pointer'
                 onClick={() =>{
                     showDropdown()
-                    showUser()
+                    
                 }}>
+
+                {/* using the tenary operator here if a user is logged and has a photoURL use the avatar component with the photoURL eles use only the avatar component with the initials of the logged in user */}
+
+                {/* optional chaining is also employed here ==>(?.). This makes it safe to access properties of an object even if one or more values in the chain is null or undefined  */}
+
+                { user?.photoURL ?
+                    
                     <Avatar 
                         sx={{width:30, height:30}}
-                        src={photoURL}
+                        src = {user.photoURL}
+                    ></Avatar> :
+                    <Avatar
+                    sx = {{width: 30, height:30}}>
+                    
+                
+                    </Avatar>
+                }
 
-                    ></Avatar>
                 </motion.div>
 
                 {/* using the tenary operation to display a simple dropdowm menu depending on the state  */}

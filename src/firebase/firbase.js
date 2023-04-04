@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore} from 'firebase/firestore' 
 import { getAuth, GoogleAuthProvider  } from 'firebase/auth'
+import { getApp, getApps } from "firebase/app";
 
 
 
@@ -14,8 +15,9 @@ const firebaseConfig = {
   appId: "1:989831510803:web:b63a5f85293bf95280f8e6"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// Initialize Firebase. To prevent firebase from initializing everytime the page refreshes check if there are no apps running
+
+const app = getApps.length>0 ? getApp() : initializeApp(firebaseConfig);
 
 const dataBase = getFirestore(app)
 const auth = getAuth(app)
