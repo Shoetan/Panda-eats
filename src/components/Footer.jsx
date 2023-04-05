@@ -1,17 +1,51 @@
 const Footer = () => {
+
     return ( 
         <div>
-            <div className="border flex flex-col bg-gradient-to-r from-secondary to-dark mt-12 p-4 justify-between text-background md:justify-between md:flex-row">
-              <div>
-                <h3 className="font-poppins font-semibold">PANDA EATS</h3>
-                <h5 className="font-serif font-extralight">801 West Grace Street, Venice</h5>
-                <h5 className="font-serif font-semibold">T:+609 720 7000 </h5>
-                <h5 className="font-poppins text-sm mt-8">&#169; COPYRIGHT  2023</h5>
+
+        {/* First container to hold the two components of the footer  */}
+           <div className="bg-gradient-to-r from-dark to-secondary text-background font-poppins p-4 flex flex-col sm:justify-around sm:flex-row">
+ 
+              <div className="mb-6">
+                <h2 className="text-lg mb-2">LOCATIONS</h2>
+
+                <div className="text-sm font-light">
+                  <div className="mb-2">
+                        <p>376 Van Burnt St</p>
+                        <p>Brooklyn -11231</p>
+                  </div>
+
+                  <div>
+                      <p>25 Union Square West</p>
+                      <p>New York, NY -10003</p>
+                  </div>
+                </div>
 
               </div>
+
+              <div>
+                <h2>Hours</h2>
+
+                <div className="text-sm font-light">
+                  <div>
+                    <p>
+                        Monday - Thursday
+                    </p>
+                    <p>
+                        5:30pm - 10:pm
+                    </p>
+                  </div>
+                </div>
+
+
+
+
+              </div>
+
+           
+           </div>
              
-                
-            </div>
+        
         </div>
      );
 }

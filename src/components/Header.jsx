@@ -35,6 +35,7 @@ const Header = () => {
     // get the credentials of the current logged in user from firebase using the firebase react hooks
 
     const [user] = useAuthState(auth)
+
     
 
     return (
