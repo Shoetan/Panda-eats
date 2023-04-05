@@ -21,7 +21,7 @@ const Dropdown = () => {
     const signOutUser = () => {
        signOut(auth)
         .then((result) => {
-            alert('Logged out successfully');
+            alert(`${result} logged out successfully`);
 
         })
 
