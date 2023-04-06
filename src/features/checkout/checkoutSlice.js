@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState ={
-    value : 'true'
+    value : 'false'
 }
 
 
 export const checkoutSlice = createSlice ({
-    name : 'checkOut',
+    name : 'checkout',
     initialState,
 
     reducers : {

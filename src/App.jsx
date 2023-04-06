@@ -5,10 +5,18 @@ import HowItWorks from "./components/HowItWorks"
 import Footer from "./components/Footer"
 import MenuContainer from "./components/MenuContainer"
 import { AnimatePresence } from "framer-motion"
+import CheckOut from "./components/CheckOut"
+
+import { useSelector } from "react-redux"
+
 
 function App () {
+
   
 
+  const modal = useSelector((state) => state.checkout.value)
+  
+  
   return (
 
     <AnimatePresence>
@@ -18,6 +26,11 @@ function App () {
             <Hero/>
             <HowItWorks/>
             <MenuContainer/>
+
+            {
+              modal ? null : <CheckOut/>
+            }
+            
             <About/>
             <Footer/>
     

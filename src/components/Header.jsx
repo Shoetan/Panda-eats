@@ -76,7 +76,11 @@ const Header = () => {
             
             <div className='relative -top-3.5 right-3   rounded-full bg-red-700  w-5 h-5 flex items-center justify-center'>
                 <p className='text-white text-xs'> { count }</p> 
-            </div> 
+            </div>
+            
+
+
+            
 
             <div className='flex flex-col items-center justify-center'>
                 <motion.div whileTap={{scale:0.6 }} className='cursor-pointer'

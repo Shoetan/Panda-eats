@@ -4,7 +4,7 @@ const Footer = () => {
         <div>
 
         {/* First container to hold the two components of the footer  */}
-           <div className="bg-gradient-to-r from-dark to-secondary text-background font-poppins p-4 flex flex-col sm:justify-around sm:flex-row">
+           <div className="bg-gradient-to-r from-dark to-secondary text-background font-poppins p-4 flex flex-col mt-10 sm:justify-around sm:flex-row">
  
               <div className="mb-6">
                 <h2 className="text-lg mb-2">LOCATIONS</h2>
