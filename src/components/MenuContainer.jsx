@@ -1,10 +1,7 @@
 import Menu from "../pages/Menu"
 import cartItems from "../assets/cartItems"
 import { useDispatch } from 'react-redux'
-import { increaseCount } from '../features/counter/counterSlice'
-
-
-
+import { increaseCount } from "../features/counter/counterSlice"
 
 const MenuContainer = () => {
 
@@ -61,6 +58,7 @@ const MenuContainer = () => {
 
                 
         </div>
+        
 
 
 

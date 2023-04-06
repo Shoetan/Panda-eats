@@ -11,6 +11,7 @@ const Dropdown = () => {
         signInWithPopup(auth, provider)
             .then((result) =>{
                 window.localStorage.setItem('credentials',JSON.stringify(result));
+                alert('You are loggedin in successfully')
             })
 
             .catch ((err) => {
