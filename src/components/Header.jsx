@@ -40,7 +40,7 @@ const Header = () => {
 
     return (
         
-    <header className='sticky top-0 z-30 bg-background flex mx-auto justify-between items-center -mt-6 mb-6'>
+    <header className='sticky top-0 z-30 bg-background flex mx-auto justify-between items-center container  -mt-6 '>
 
         {/* restaurant Logo */}
         <div>
@@ -51,15 +51,15 @@ const Header = () => {
         {/* nav links */}
 
         <div>
-            <ul className=' font-poppins text-sm hidden sm:flex space-x-6 text-dark'>
+            <ul className='font-poppins text-sm hidden sm:flex space-x-6 text-dark'>
                 
-                <li className='hover:text-slate-500 cursor-pointer'>HOW TO ORDER</li>
+                <li className='hover:opacity-75 cursor-pointer'> HOW TO ORDER</li>
 
-                <li className='hover:text-slate-500 cursor-pointer'>MENU</li>
+                <li className='hover:opacity-75 cursor-pointer'> MENU</li>
                 
-                <li className='hover:text-slate-500 cursor-pointer'>ABOUT US</li>
+                <li className='hover:opacity-75 cursor-pointer'> ABOUT US</li>
                 
-            </ul>
+          </ul>
         </div>
 
         {/* shopping cart,avatar or hamburger menu based on the view */}

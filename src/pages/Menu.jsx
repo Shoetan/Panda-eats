@@ -6,13 +6,46 @@ import { useDispatch } from "react-redux";
 
 import { setId } from "../features/foodorder/foodOrderSlice";
 
+import { useState } from "react";
+
 const Menu = ({title, price, image, increaseCount,id}) => {
+
+
+    const [cartItemsId, setCartItemsId] = useState([])
      
     const dispatch = useDispatch()
 
     //This is the function that calls on the setID reducers from the redux store. It takes in a parameter or payload of id which is a prop
     const pushIdToArray = () =>{
         dispatch(setId(id))
+    }
+
+
+    /* write your thoughts here how to solve this problem you are facing
+    
+        Remember that id is already a prop coming in. The id is unique to every food item in the list
+
+        1. First create a state to hold the id of the selected food item the default state is an empty array use the useState hook.
+        2. create a function that will run once the add button is pressed. This function will update the array holding the id of the selected items and send that updated array to localStorage.
+        NB: Now create a new array that contains everything from initial array. Check if the array has the id passed as props 
+        3.Now take the array cartItemsId and use the array find method on it to check if and the id passed as props already exists.
+        4.If the id or you can say value does not exit in the array push the id that is passed as props to the array.
+     */
+
+
+        //function to push to array 
+    const pushCartItemsIdToArray = () =>{
+
+        const newIds = [1,2,3,4]
+
+        const newCartItemsId = [...cartItemsId]
+        newCartItemsId.push(id)
+
+        setCartItemsId(newCartItemsId)
+        console.log(cartItemsId);
+
+       
+  
     }
 
     return ( 
@@ -27,14 +60,15 @@ const Menu = ({title, price, image, increaseCount,id}) => {
             
                 <div className='flex flex-col items-center justify-center cursor-pointer'>
                     <img src={image} alt={title} className='h-44 w-36  object-cover ' />
-                    <span className='font-poppins text-sm'>{title}</span>
+                    <span className='font-montserrat text-secondary text-sm'>{title}</span>
 
                     <div className='space-x-4 text-center mt-4 flex items-center justify-center '>
-                        <span className='font-poppins'>NGN {price}</span > 
+                        <span className='font-montserrat text-lg'>NGN {price}</span > 
 
                         <motion.div whileTap={{scale:0.6}} onClick={()=>{
                             increaseCount()
                             pushIdToArray()
+                            pushCartItemsIdToArray()
                         }} className='hover:scale-125'>
                             <Plus/> 
                             

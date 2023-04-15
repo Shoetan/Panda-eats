@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 // declare the initial state of the id which will be an empty array
-
 const initialState = {
-   value : [],
+    value : []
 }
+
 
 export const foodOrderSlice = createSlice({
     name : 'id',

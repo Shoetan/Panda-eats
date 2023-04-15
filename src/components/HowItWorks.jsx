@@ -7,9 +7,9 @@ const HowItWorks = () => {
     return ( 
         <div>
             <div>
-                <div className="flex flex-col items-center justify-center font-poppins mt-10 text-dark">
-                 <h2 className="text-3xl p-4 ">How To Order?</h2>
-                 <h4 className="text-sm opacity-90">Follow the steps</h4>
+                <div className="flex flex-col items-center justify-center mt-10 ">
+                 <h2 className="text-3xl p-4 font-poppins font-semibold text-secondary ">How To Order?</h2>
+                 <h4 className="text-sm opacity-90 font-montserrat">Follow the steps</h4>
                 </div>
 
                 {/* Create three divs to each step on how to order */}
@@ -17,7 +17,7 @@ const HowItWorks = () => {
                 
                 <div className='flex flex-col items-center justify-center hover:scale-125'>
                     <img src={order} alt="An order confirmation" className='h-12 w-12 md:h-28 md:w-28' />
-                    <h3 className='font-poppins p-4 text-xs font-semibold md:text-sm'>place your order</h3>
+                    <h3 className='font-poppins p-4 text-xs font-semibold md:text-sm'>Place your order</h3>
                 </div>
                 
                 <div className='flex items-center justify-center flex-col hover:scale-125'>
