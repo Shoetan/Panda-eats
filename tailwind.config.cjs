@@ -8,15 +8,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily : {
-        'poppins' : ['poppins', 'sans-serif']
+        'poppins' : ['poppins', 'sans-serif'],
+        'montserrat' : ['montserrat', 'sans-serif'] 
       },
       colors : {
-        primary: '#335145',
-        secondary: '#638275',
-        accent: '#3AACFF',
-        background: '#FBFCF8',
-        dark: '#050301',
-        white: '#FFFFFF'
+        primary: '#79A95B',
+        secondary: '#333333',
+        accent: '#FFA500',
+        background: '#F8F8F8',
+        text_dark: '#000000',
+        text_white: '#FFFFFF',
       }
     },
   },

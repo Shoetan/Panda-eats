@@ -17,7 +17,7 @@ export const checkoutSlice = createSlice ({
         
         state.value = !state.value
       }  
-        //rewrite the reducers so I can have one reducer to change the state to true and another state to false or just use the same reducer
+        
     }
 
 })

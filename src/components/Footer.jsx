@@ -4,18 +4,18 @@ const Footer = () => {
         <div>
 
         {/* First container to hold the two components of the footer  */}
-           <div className="bg-gradient-to-r from-dark to-secondary text-background font-poppins p-4 flex flex-col mt-10 sm:justify-around sm:flex-row">
+           <div className=" bg-gradient-to-r from-primary to-teal-400 p-4 flex flex-col mt-20 sm:justify-around sm:flex-row">
  
               <div className="mb-6">
-                <h2 className="text-lg mb-2">LOCATIONS</h2>
+                <h2 className="text-lg mb-2 text-text_dark font-poppins font-medium">LOCATIONS</h2>
 
                 <div className="text-sm font-light">
-                  <div className="mb-2">
+                  <div className="mb-2 text-text_dark font-montserrat">
                         <p>376 Van Burnt St</p>
                         <p>Brooklyn -11231</p>
                   </div>
 
-                  <div>
+                  <div className="font-montserrat">
                       <p>25 Union Square West</p>
                       <p>New York, NY -10003</p>
                   </div>
@@ -24,10 +24,10 @@ const Footer = () => {
               </div>
 
               <div>
-                <h2>Hours</h2>
+                <h2 className="text-lg mb-2 text-text_dark font-poppins font-medium">Hours</h2>
 
                 <div className="text-sm font-light">
-                  <div>
+                  <div className="font-montserrat">
                     <p>
                         Monday - Thursday
                     </p>
