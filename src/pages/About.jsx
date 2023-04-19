@@ -3,7 +3,7 @@ const About = () => {
         <div>
             <div className="container mx-auto">
                 <div className="flex flex-col items-center justify-center mt-10 text-secondary">
-                    <h2 className="text-3xl p-4 font-poppins">About Us</h2>
+                    <h2 className="text-3xl p-4 font-poppins font-semibold">About Us</h2>
                     <p className="p-2 text-base leading-normal break-all w-4/5 font-montserrat">
                         Panda Stephen, opened the first ‘Panda Eats’ Restaurant in Los Alamitos, Abeokuta, on September 27, 1977. Today, there are 37 areas all through Arizona, California, Illinois, Louisiana, Nevada, Oregon, Tennessee, and Washington.
 
