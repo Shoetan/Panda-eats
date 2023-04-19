@@ -11,16 +11,16 @@ const Hero = () => {
 
            {/* NB: Remove the background color once you are done getting the proportions */}
 
-            <div className="container mx-auto flex flex-col  rounded-t-lg rounded-b-lg mt-6 md:p-2">
+            <div className="container mx-auto flex flex-col md:p-2 md:justify-between md:mb-32">
 
-                <div className=' mt-11 flex flex-col items-center justify-center md:flex-row md:justify-around'>
+                <div className='mt-10 flex flex-col items-center justify-center md:flex-row md:justify-between md:mx-32'>
 
                     {/* Hero section text  */}
                     <div className='flex flex-col p-4 -mt-14 -mb-12'>
 
-                        <h1 className=' text-secondary font-poppins text-4xl font-semibold mb-6 mt-6 md:text-6xl md:-mt-10'>Enjoy the artistry <br /> Feel good</h1>
+                        <h1 className=' text-secondary font-poppins text-4xl font-extrabold mb-6 mt-6 md:text-7xl md:-mt-10'>Enjoy the artistry <br /> Feel good</h1>
 
-                        <p className='text-secondary font-montserrat mb-8 font-light text-sm md:w-3/6 md:text-xl'>Taste our restaurant's culinary masterpieces that will tantalize your taste buds and enliven your sense.</p>
+                        <p className='text-secondary font-montserrat mb-8 font-light text-sm md:w-3/6 md:text-xl md:mt-6'>Taste our restaurant's culinary masterpieces that will tantalize your taste buds and enliven your sense.</p>
                     </div>
                 
                     {/* Hero Image div */}
@@ -32,7 +32,7 @@ const Hero = () => {
 
 
                 {/* Hero section call to action */}
-                <div className='flex space-x-8 font-poppins p-8 md:flex-row '>
+                <div className='flex space-x-8 font-poppins p-8 md:flex-row  md:mx-28 '>
 
                     <motion.button 
                      whileTap={{scale:0.8}}   
