@@ -13,8 +13,8 @@ import { useSelector } from "react-redux"
 function App () {
 
   
-
-  const modal = useSelector((state) => state.checkout.value)
+//Get the state of the checkout modal from the redux store
+const checkOutModal = useSelector((state) => state.checkout.value)
   
   
   return (
@@ -27,8 +27,10 @@ function App () {
             <HowItWorks/>
             <MenuContainer/>
 
+            {/* The checkout modal will not display if the current state is false and will display if state becomes true */}
+
             {
-              modal ? null : <CheckOut/>
+              checkOutModal ? null : <CheckOut/>
             }
             
             <About/>

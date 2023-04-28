@@ -36,7 +36,7 @@ const MenuContainer = () => {
         <div className="container flex flex-col mx-auto justify-between mt-8 p-8 md:grid grid-cols-3 gap-8">
                 {  cartItems.map(cartItem =>{
 
-                    //destructure from the objects
+                    //destructure from the cartitems object
                     const {id, title, price, image, amount } = cartItem
 
                     return <Menu

@@ -30,12 +30,17 @@ export const counterSlice = createSlice({
                 state.value -=1
 
             }
+        },
+
+        clearCount : (state) =>{
+            
+            state.value = 0
         }
     }
 })
 
 //export the actions created
 
-export const {increaseCount, decreaseCount} = counterSlice.actions
+export const {increaseCount, decreaseCount,clearCount} = counterSlice.actions
 
 export default counterSlice.reducer

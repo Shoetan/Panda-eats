@@ -1,15 +1,32 @@
-
-
-
+import { 
+    useDispatch,
+    useSelector
+ } from "react-redux";
 
 
 const DisplayCartItems = () => {
-    return ( 
+
+//const dispatch = useDispatch()
+
+//import the array containing the id of the food items the user selects from the store 
+const foodId = useSelector((state)=> state.foodId.value)
+
+const press = () => {
+  console.log( foodId);
+}
+
+
+return ( 
 
 
         <div>
-            <h4>This is the display cart items section</h4>
+            <button
+            onClick={() =>{
+                press()
+            }}            
+            >CLick Here</button>
         </div>
+        
      );
 }
  
