@@ -1,6 +1,6 @@
 const About = () => {
     return ( 
-        <div>
+        <div id="about-section">
             <div className="container mx-auto">
                 <div className="flex flex-col items-center justify-center mt-10 text-secondary">
                     <h2 className="text-3xl p-4 font-poppins font-semibold">About Us</h2>

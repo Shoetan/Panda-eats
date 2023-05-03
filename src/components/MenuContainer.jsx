@@ -20,7 +20,7 @@ const MenuContainer = () => {
 
 
   return (
-    <div>
+    <div id="menu-section">
         
         {/* Create the menu header here */}
         <div className="flex flex-col items-center justify-center mt-10 ">

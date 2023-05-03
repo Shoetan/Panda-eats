@@ -14,6 +14,29 @@ import { auth } from '../firebase/firbase';
 
 const Header = () => {
 
+    //fucntions to scroll to different sections
+  
+       
+    const scrollToHowToOrder = () => {
+
+        const howToOderSection = document.querySelector('#how-to-order-section')
+        howToOderSection.scrollIntoView({behavior: 'smooth'})
+
+    }
+
+
+
+    const scrollToMenu = () => {
+        const menuSection = document.querySelector('#menu-section')
+        menuSection.scrollIntoView({behavior: 'smooth'})
+    } 
+
+
+    const scrollToAbout = () => {
+        const aboutSection = document.querySelector('#about-section')
+        aboutSection.scrollIntoView({behavior: 'smooth'})
+    }
+
 
 
         // get the current value of the state from the store
@@ -54,11 +77,17 @@ const Header = () => {
         <div>
             <ul className='font-poppins text-sm hidden sm:flex space-x-6 text-dark'>
                 
-                <li className='hover:opacity-75 cursor-pointer'> HOW TO ORDER</li>
+                <li className='hover:opacity-75 cursor-pointer' onClick={()=>{
+                    scrollToHowToOrder()
+                }}> HOW TO ORDER</li>
 
-                <li className='hover:opacity-75 cursor-pointer'> MENU</li>
+                <li className='hover:opacity-75 cursor-pointer' onClick={()=>{
+                    scrollToMenu()
+                }}> MENU</li>
                 
-                <li className='hover:opacity-75 cursor-pointer'> ABOUT US</li>
+                <li className='hover:opacity-75 cursor-pointer' onClick={()=>{
+                    scrollToAbout()
+                }}> ABOUT US</li>
                 
           </ul>
         </div>

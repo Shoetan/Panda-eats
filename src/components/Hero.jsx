@@ -2,6 +2,20 @@ import food1 from '../assets/food1.png'
 import { motion } from 'framer-motion';
 
 const Hero = () => {
+
+ // THid function scrolls to the menu section
+    const scrollToMenu = () => {
+        const menuSection = document.querySelector('#menu-section')
+        menuSection.scrollIntoView({behavior: 'smooth'})
+    }   
+    
+    
+    const scrollToHowToOrder = () => {
+
+        const howToOderSection = document.querySelector('#how-to-order-section')
+        howToOderSection.scrollIntoView({behavior: 'smooth'})
+
+    }
     return ( 
 
         //first div should have a width and height of 100vw
@@ -36,12 +50,20 @@ const Hero = () => {
 
                     <motion.button 
                      whileTap={{scale:0.8}}   
-                     className='rounded full w-48 bg-accent p-2 text-white'>
+                     className='rounded full w-48 bg-accent p-2 text-white'
+                     onClick={()=>{
+                        scrollToHowToOrder()
+                     }}
+                     >
                      How To Order
                      </motion.button>
 
                     <motion.button whileTap={{scale:0.8}} 
-                    className='rounded full w-48 text-secondary border border-bg-secondary p-2 '>
+                    className='rounded full w-48 text-secondary border border-bg-secondary p-2'
+                    onClick={()=>{
+                        scrollToMenu()
+                    }}
+                    >
                     See menu
                     </motion.button>
                 </div>
