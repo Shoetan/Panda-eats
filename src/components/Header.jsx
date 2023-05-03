@@ -30,6 +30,7 @@ const Header = () => {
     const showDropdown = () =>{
         setIsShow(!isShow)
         
+        
     }
     
     // get the credentials of the current logged in user from firebase using the firebase react hooks

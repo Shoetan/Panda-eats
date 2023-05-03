@@ -9,7 +9,7 @@ import { setId } from "../features/foodorder/foodOrderSlice";
 
 
 
-const Menu = ({title, price, image, increaseCount,id}) => {
+const Menu = ({title, price, image, increaseCount,id,amount}) => {
 
     /* write your thoughts here how to solve this problem you are facing
     
@@ -27,7 +27,14 @@ const Menu = ({title, price, image, increaseCount,id}) => {
 
     const updateItemIdToStore = () => {
 
-        dispatch(setId(id))
+        //send an object to the store consisting of details of the selected food 
+        dispatch(setId({
+            'id' : id,
+            'image' : image,
+            'price' : price,
+            'title' : title,
+            'amount' : amount
+        }))
       
     }
 
