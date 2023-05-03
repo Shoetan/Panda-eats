@@ -5,7 +5,7 @@ import delivery from '../assets/delivery.png'
 
 const HowItWorks = () => {
     return ( 
-        <div>
+        <div id='how-to-order-section'>
             <div>
                 <div className="flex flex-col items-center justify-center mt-10 ">
                  <h2 className="text-3xl p-4 font-poppins font-semibold text-secondary ">How To Order?</h2>
