@@ -2,63 +2,71 @@ import { createSlice } from '@reduxjs/toolkit'
 
 // declare the initial state of the id which will be an empty array
 const initialState = {
-    value : []
+    value: []
 }
 
 
 export const foodOrderSlice = createSlice({
-    name : 'foodOrder',
+    name: 'foodOrder',
     initialState,
 
-    reducers:{
-        setId : (state,action) =>{
+    reducers: {
+        addSelectedFoodId: (state, action) => {
+
+            //use a default value for the action.payload .if action id dispatch without payload the reducer will not throw and error
+
+            const selectedFoodId = action.payload || {}
+
             // take the payload and push it to an array 
-            state.value.push(action.payload)
+            state.value = [...state.value, selectedFoodId]
         },
 
 
         // clear the array of selected food Id from the store 
-        clearId : (state) =>{ 
+        clearSelectedFoodId: (state) => {
+
 
             state.value = []
 
         },
 
-        //increase the amount based on the Id of the item
-
-        increaseAmount: (state, action )=>{
+        increaseSelectedFoodAmount: ( state, action) =>{
             
-            const idToIncrease = action.payload
+            //destructure id and amount from the payload
 
-            const updatedItems = state.value.map(item => {
+            const {id, amount } = action.payload
 
-                if (item.id === idToIncrease) {
-
-                    return {
-                        ...item,
-                        amount : item.amount + 1
-                    }
-                }
-
-                else{
-                    return item
-                    
-                }
-
-                
-        
-            })
-
-            state.value = updatedItems
             
+            //find the specific index of the selected item from the array of foods
             
-        
+            const index = state.value.findIndex(food => food.id === id)
+            
+            if (index !== -1) {
+                state.value[index].amount += amount
+            }
             
 
-        }
+        },
+
+        decreaseSelectedFoodAmount: (state, action ) =>{
+
+            //destructure id and amount from the payload
+
+            const {id, amount} = action.payload
+
+            //find the specific index of the selected item from the array of foods
+
+            const index = state.value.findIndex(food => food.id === id)
+
+            if (index !== -1) {
+                state.value[index].amount -=amount
+            }
+        } 
+
+
     }
 })
 
 
-export const {setId, clearId, increaseAmount} = foodOrderSlice.actions
+export const { addSelectedFoodId, clearSelectedFoodId, increaseSelectedFoodAmount, decreaseSelectedFoodAmount } = foodOrderSlice.actions
 export default foodOrderSlice.reducer

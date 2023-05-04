@@ -1,15 +1,15 @@
-import {Plus } from "../icons";
+import { Plus } from "../icons";
 
 import { motion } from "framer-motion";
 
 
 import { useDispatch } from "react-redux";
 
-import { setId } from "../features/foodorder/foodOrderSlice";
+import { addSelectedFoodId } from "../features/foodorder/foodOrderSlice";
 
 
 
-const Menu = ({title, price, image, increaseCount,id,amount}) => {
+const Menu = ({ title, price, image, increaseCount, id, amount }) => {
 
     /* write your thoughts here how to solve this problem you are facing
     
@@ -22,62 +22,62 @@ const Menu = ({title, price, image, increaseCount,id,amount}) => {
         4.If the id or you can say value does not exit in the array push the id that is passed as props to the array.
      */
 
-    
+
     const dispatch = useDispatch();
 
     const updateItemIdToStore = () => {
 
         //send an object to the store consisting of details of the selected food 
-        dispatch(setId({
-            'id' : id,
-            'image' : image,
-            'price' : price,
-            'title' : title,
-            'amount' : amount
-        }))
-      
+        dispatch(addSelectedFoodId({
+            'id': id,
+            'image': image,
+            'price': price,
+            'title': title,
+            'amount': amount
+        }) )
+
     }
 
 
-    return ( 
+    return (
 
 
-        
+
         <div>
             {/* Keep the styles here and you need only one card or components that will receive the destructured props to display  */}
 
 
             <div>
-            
+
                 <div className='flex flex-col items-center justify-center cursor-pointer'>
-                
+
                     <img src={image} alt={title} className='h-44 w-36  object-cover ' />
                     <span className='font-montserrat text-secondary text-sm'>{title}</span>
-                    
 
-                    
+
+
 
                     <div className='space-x-4 text-center mt-4 flex items-center justify-center '>
-                        <span className='font-montserrat text-lg'>NGN {price}</span > 
- 
-                        <motion.div whileTap={{scale:0.6}} onClick={()=>{
+                        <span className='font-montserrat text-lg'>NGN {price}</span >
+
+                        <motion.div whileTap={{ scale: 0.6 }} onClick={() => {
                             increaseCount()
                             updateItemIdToStore()
-                            
+
                         }} className='hover:scale-125'>
-                            <Plus/> 
-                            
-                        </motion.div>  
-                     
+                            <Plus />
+
+                        </motion.div>
+
                     </div>
-                    
+
                 </div>
 
-              
+
             </div>
         </div>
-        
-     );
+
+    );
 }
- 
+
 export default Menu;
