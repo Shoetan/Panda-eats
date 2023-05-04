@@ -1,23 +1,30 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Minus, Plus } from "../icons";
-import { increaseAmount } from "../features/foodorder/foodOrderSlice";
+import {  decreaseSelectedFoodAmount, increaseSelectedFoodAmount } from "../features/foodorder/foodOrderSlice";
 
 
 
-const DisplayCartItems = ({image,title,price,id,amount}) => {
+const DisplayCartItems = ({ image, title, price, amount, id }) => {
 
-    
-    
+
+
     const dispatch = useDispatch()
 
 
-   
+    const handleIncreaseAmount = (id) =>{
+
+        dispatch(increaseSelectedFoodAmount({id, amount: 1}))
+    }
 
 
- 
+
+    const handleDecreaseAmount = (id) =>{
+        dispatch(decreaseSelectedFoodAmount({id, amount: 1}))
+    }
 
 
-return ( 
+
+    return (
 
 
         <div className="">
@@ -26,31 +33,35 @@ return (
                 <img src={image} alt="This is a trial" className="h-20" />
 
                 <div className="">
-                   <h2 className="font-poppins text-text_white">{title}</h2>
-                   <span className="font-montserrat text-text_white"> NGN {price}</span>
+                    <h2 className="font-poppins text-text_white">{title}</h2>
+                    <span className="font-montserrat text-text_white"> NGN {price}</span>
                 </div>
 
                 <div className="flex gap-1">
-                    <div className="cursor-pointer text-text_white" onClick={()=>{
-                        
+                    <div className="cursor-pointer text-text_white" onClick={() => {
+
+                        handleDecreaseAmount(id)
+
                     }}>
-                        <Minus/>
+                        <Minus />
                     </div>
                     <span className="text-text_white">{amount}</span>
 
-                    <div className="cursor-pointer text-text_white" 
-                    onClick={()=>{
-                        dispatch(increaseAmount(id))
+                    <div className="cursor-pointer text-text_white"
+                        onClick={() => {
 
-                    }}>
-                        <Plus/>
+                            handleIncreaseAmount(id)
+                            
+
+                        }}>
+                        <Plus />
                     </div>
                 </div>
 
             </div>
         </div>
-        
-     );
+
+    );
 }
- 
+
 export default DisplayCartItems;
