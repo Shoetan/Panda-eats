@@ -11,6 +11,7 @@ export const foodOrderSlice = createSlice({
     initialState,
 
     reducers: {
+
         addSelectedFoodId: (state, action) => {
 
             //use a default value for the action.payload .if action id dispatch without payload the reducer will not throw and error
@@ -37,9 +38,11 @@ export const foodOrderSlice = createSlice({
             const {id, amount } = action.payload
 
             
-            //find the specific index of the selected item from the array of foods
+            //find the specific index of the selected item from the array of foods selected where the food is equal to the id coming from the payload
             
             const index = state.value.findIndex(food => food.id === id)
+
+            // if statement to check if the index is found. findIndex returns -1 if the index is not found so  if index is not equal to -1 run the statement
             
             if (index !== -1) {
                 state.value[index].amount += amount
@@ -54,19 +57,48 @@ export const foodOrderSlice = createSlice({
 
             const {id, amount} = action.payload
 
-            //find the specific index of the selected item from the array of foods
+            //find the specific index of the selected item from the array of foods selected where the food id is equal to the id coming from the payload
 
             const index = state.value.findIndex(food => food.id === id)
 
-            if (index !== -1) {
-                state.value[index].amount -=amount
+             // if statement to check if the index is found. findIndex returns -1 if the index is not found so  if index is not equal to -1 run the statement
+
+            if (index !== -1 ) {
+
+                if(state.value[index].amount > 1){
+                    
+                    state.value[index].amount -=amount
+                }
             }
-        } 
+        },
+        
+        
+        removeSelectedFood : (state, action) =>{
+
+            //destructure the id from the payload
+
+            const { id } = action.payload
+
+            //find the specific index of the selected item from the array of foods selected where the food id is equal to the id coming from the payload
+
+            const index = state.value.findIndex(food =>food.id === id)
+
+             // if statement to check if the index is found. findIndex returns -1 if the index is not found so  if index is not equal to -1 run the statement
+
+            if(index !== -1){
+
+                //splice is a javascript array method that removes items from an array at a given index. it takes two arguements the index where the removal should happen and the number of items to be removed
+
+                state.value.splice(index, 1)
+
+            }
+
+        }
 
 
     }
 })
 
 
-export const { addSelectedFoodId, clearSelectedFoodId, increaseSelectedFoodAmount, decreaseSelectedFoodAmount } = foodOrderSlice.actions
+export const { addSelectedFoodId, clearSelectedFoodId, increaseSelectedFoodAmount, decreaseSelectedFoodAmount, removeSelectedFood} = foodOrderSlice.actions
 export default foodOrderSlice.reducer
