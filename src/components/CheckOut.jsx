@@ -4,6 +4,7 @@ import DisplayCartItems from "./DisplayCartItems";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCount } from "../features/counter/counterSlice";
 import { clearSelectedFoodId } from "../features/foodorder/foodOrderSlice";
+import Total from "./Total";
 
 const CheckOut = () => {
 
@@ -70,6 +71,15 @@ const CheckOut = () => {
 
                 </div>
 
+
+
+            {/*  Check the length of the food array coming from the store which is called food Id. If it is not zero display the total component that has the total and the checkout button  */}
+
+
+            {  
+                foodId.length > 0 ? <Total/> : null
+                
+            }
 
 
             </div>
