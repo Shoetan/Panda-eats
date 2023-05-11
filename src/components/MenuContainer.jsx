@@ -37,7 +37,7 @@ const MenuContainer = () => {
                 {  cartItems.map(cartItem =>{
 
                     //destructure from the cartitems object
-                    const {id, title, price, image, amount } = cartItem
+                    const {id, title, price, image, amount,total } = cartItem
 
                     return <Menu
                         key={id}
@@ -47,6 +47,7 @@ const MenuContainer = () => {
                         amount = {amount}
                         increaseCount = {increaseCounter}
                         id = {id}
+                        total = {total}
                         
                         
                     />

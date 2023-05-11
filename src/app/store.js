@@ -10,6 +10,6 @@ export const store = configureStore({
     reducer : {
         counter:counterReducer,
         checkout : checkoutReducer,
-        foodOrder : foodOrderReducer
+        foodSelected : foodOrderReducer
     },
 })

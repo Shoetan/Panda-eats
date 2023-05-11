@@ -6,15 +6,13 @@ import Footer from "./components/Footer"
 import MenuContainer from "./components/MenuContainer"
 import { AnimatePresence } from "framer-motion"
 import CheckOut from "./components/CheckOut"
-
 import { useSelector } from "react-redux"
 
 
 function App () {
 
+  const checkOutModal = useSelector((state) => state.checkout.value)
   
-//Get the state of the checkout modal from the redux store
-const checkOutModal = useSelector((state) => state.checkout.value)
   
   
   return (

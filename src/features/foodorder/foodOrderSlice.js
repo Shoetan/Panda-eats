@@ -93,6 +93,64 @@ export const foodOrderSlice = createSlice({
 
             }
 
+        },
+
+
+        increaseTotalOfSelectedFood: (state, action) =>{
+
+            //destructure the id from the payload which is passed as an object
+
+            const {id} = action.payload
+
+            //find the specific index of the selected item from the array of foods selected where the food id is equal ti the id coming from the payload
+
+            const index = state.value.findIndex(food => food.id === id)
+
+            //if statement to check if the index is found. findIndex returns -1 if the index is not found so if index is not equal to -1 run the statement
+
+            if(index !== -1){
+
+             // recalculate the total property by multiplying the price property and the amount property.
+
+                state.value[index].total = state.value[index].price*state.value[index].amount
+
+
+
+            }
+
+        },
+
+
+        decreaseTotalOfSelectedFood: (state, action ) =>{
+
+            // destructure the id coming from the payload
+            
+            const {id} = action.payload
+
+              //find the specific index of the selected item from the array of foods selected where the food id is equal ti the id coming from the payload 
+
+            const index = state.value.findIndex(food =>food.id === id)
+
+            if (index !==1) {
+
+                    //if statement to check if the index is found. findIndex returns -1 if the index is not found so if index is not equal to -1 run the statement
+
+
+                if(state.value[index].amount >= 1 ){
+
+                    //if the amount is greater than or equal to 1 re-evaluate the total property by subtracting the price from the current total
+
+                    state.value[index].total = state.value[index].total - state.value[index].price
+                }
+                else {
+                    state.value[index].total = state.value[index].total
+                }
+
+
+                
+                
+            }
+
         }
 
 
@@ -100,5 +158,5 @@ export const foodOrderSlice = createSlice({
 })
 
 
-export const { addSelectedFoodId, clearSelectedFoodId, increaseSelectedFoodAmount, decreaseSelectedFoodAmount, removeSelectedFood} = foodOrderSlice.actions
+export const { addSelectedFoodId, clearSelectedFoodId, increaseSelectedFoodAmount, decreaseSelectedFoodAmount, removeSelectedFood, increaseTotalOfSelectedFood, decreaseTotalOfSelectedFood} = foodOrderSlice.actions
 export default foodOrderSlice.reducer

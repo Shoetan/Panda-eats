@@ -9,7 +9,7 @@ import { addSelectedFoodId } from "../features/foodorder/foodOrderSlice";
 
 
 
-const Menu = ({ title, price, image, increaseCount, id, amount }) => {
+const Menu = ({ title, price, image, increaseCount, id, amount,total }) => {
 
     /* write your thoughts here how to solve this problem you are facing
     
@@ -33,7 +33,8 @@ const Menu = ({ title, price, image, increaseCount, id, amount }) => {
             'image': image,
             'price': price,
             'title': title,
-            'amount': amount
+            'amount': amount,
+            'total': total 
         }) )
 
     }
@@ -58,7 +59,7 @@ const Menu = ({ title, price, image, increaseCount, id, amount }) => {
 
 
                     <div className='space-x-4 text-center mt-4 flex items-center justify-center '>
-                        <span className='font-montserrat text-lg'>NGN {price}</span >
+                        <span className='font-montserrat text-lg'>$ {price}</span >
 
                         <motion.div whileTap={{ scale: 0.6 }} onClick={() => {
                             increaseCount()

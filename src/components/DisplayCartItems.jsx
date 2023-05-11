@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Minus, Plus } from "../icons";
-import {  decreaseSelectedFoodAmount, increaseSelectedFoodAmount, removeSelectedFood} from "../features/foodorder/foodOrderSlice";
+import {  decreaseSelectedFoodAmount, decreaseTotalOfSelectedFood, increaseSelectedFoodAmount,increaseTotalOfSelectedFood,removeSelectedFood} from "../features/foodorder/foodOrderSlice";
 import { decreaseCount } from "../features/counter/counterSlice";
 
 
@@ -41,6 +41,31 @@ const DisplayCartItems = ({ image, title, price, amount, id }) => {
     }
 
 
+    const show = () => {
+
+        console.log('You are mad')
+      
+    }
+
+    const handleTotal =(id) => {
+
+        dispatch(increaseTotalOfSelectedFood({id}))
+      
+    }
+
+
+    const handleDecrease = (id) => {
+
+        dispatch(decreaseTotalOfSelectedFood({id}))
+      
+    }
+
+
+
+
+
+
+
 
     return (
 
@@ -49,12 +74,12 @@ const DisplayCartItems = ({ image, title, price, amount, id }) => {
             <div className="bg-secondary  rounded-xl p-4 flex justify-around items-center mb-1">
                 
 
-                <img src={image} alt="This is a trial" className="h-20" />
+                <img src={image} alt={title} className="h-20" />
                 
 
                 <div className="">
                     <h2 className="font-poppins text-text_white">{title}</h2>
-                    <span className="font-montserrat text-text_white"> NGN {price}</span>
+                    <span className="font-montserrat text-text_white">$ {price}</span>
                     
                     <p className="font-montserrat text-text_white mt-4 cursor-pointer" onClick={()=>{
 
@@ -71,6 +96,7 @@ const DisplayCartItems = ({ image, title, price, amount, id }) => {
                     <div className="cursor-pointer text-text_white" onClick={() => {
 
                         handleDecreaseAmount(id)
+                        handleDecrease(id)
 
                     }}>
                         <Minus />
@@ -81,6 +107,15 @@ const DisplayCartItems = ({ image, title, price, amount, id }) => {
                         onClick={() => {
 
                             handleIncreaseAmount(id)
+
+                            show()
+
+                            handleTotal(id)
+
+
+
+                            
+                            
                             
 
                         }}>
