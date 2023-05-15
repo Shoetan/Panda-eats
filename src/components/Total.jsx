@@ -10,24 +10,22 @@ const Total = () => {
 
     const delivery = 2.5
 
-
     const total  = subTotalAmount + delivery
 
-   const food =  useSelector((state) => state.foodSelected.value)
+    const food =  useSelector((state) => state.foodSelected.value)
 
+
+    //use the useEffect hook to load reducer on page load so the values will not not be zero.
    useEffect (() =>{
 
+
+    // The reduce method is used to reduce the total property of each item in the array to one single value
 
     setSubTotalAmount(food.reduce((total,item) =>{
         return total + item.total
     }, 0))
 
    },[food])
-
-
-   console.log(food)
-
-
 
 
 // NB: Create another element in the object called subtotal. Use the ID to create the total of the element by multiplying the amount and id then add it to the total 
