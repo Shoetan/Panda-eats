@@ -1,29 +1,36 @@
+
 import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector} from "react-redux";
 
 
 const Total = () => {
 
 
-   const dispatch = useDispatch()
+    const [subTotalAmount, setSubTotalAmount] = useState(0)
+
+    const delivery = 2.5
+
+
+    const total  = subTotalAmount + delivery
 
    const food =  useSelector((state) => state.foodSelected.value)
 
-   console.log(food[0].total)
+   useEffect (() =>{
 
 
+    setSubTotalAmount(food.reduce((total,item) =>{
+        return total + item.total
+    }, 0))
 
-    
+   },[food])
 
-        
+
+   console.log(food)
+
 
 
 
 // NB: Create another element in the object called subtotal. Use the ID to create the total of the element by multiplying the amount and id then add it to the total 
-
-
-
-
 
     return (  
         <div>
@@ -36,7 +43,7 @@ const Total = () => {
                         { /* Here will have the subtotal and amount */}
                         <div className="flex justify-around items-center mb-8 pt-8">
                             <h4 className="text-text_white font-montserrat text-lg font-medium">Sub Total</h4>
-                            <span className="text-text_white font-montserrat    text-lg font-medium ">$ {food[0].total} </span>
+                            <span className="text-text_white font-montserrat    text-lg font-medium ">$ {subTotalAmount} </span>
                         </div>
 
                 {/* Here will have the cost of delivery and amount */}
@@ -45,7 +52,7 @@ const Total = () => {
                 
                     <div className="flex justify-around items-center mb-8 pt-8">
                         <h4 className="text-text_white font-montserrat text-lg font-medium">Delivery </h4>
-                        <span className="text-text_white font-montserrat text-lg font-medium">$ {} </span>
+                        <span className="text-text_white font-montserrat text-lg font-medium">$ {delivery} </span>
                     </div>
                 
 
@@ -55,7 +62,7 @@ const Total = () => {
 
                         <div className="flex justify-around items-center mb-8 pt-8">
                             <h4 className="text-text_white font-montserrat text-2xl font-semibold"> Total</h4>
-                            <span className="text-text_white font-montserrat text-lg font-semibold ">$</span>
+                            <span className="text-text_white font-montserrat text-lg font-semibold ">${total}</span>
                         </div>
 
                                 

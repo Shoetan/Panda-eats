@@ -47,6 +47,8 @@ export const foodOrderSlice = createSlice({
             if (index !== -1) {
                 state.value[index].amount += amount
             }
+
+            return state
             
 
         },
@@ -131,20 +133,21 @@ export const foodOrderSlice = createSlice({
 
             const index = state.value.findIndex(food =>food.id === id)
 
-            if (index !==1) {
+            if (index !== -1) {
 
                     //if statement to check if the index is found. findIndex returns -1 if the index is not found so if index is not equal to -1 run the statement
 
 
-                if(state.value[index].amount >= 1 ){
+                //if(state.value[index].amount >= 1 ){
 
                     //if the amount is greater than or equal to 1 re-evaluate the total property by subtracting the price from the current total
 
-                    state.value[index].total = state.value[index].total - state.value[index].price
-                }
-                else {
-                    state.value[index].total = state.value[index].total
-                }
+                    state.value[index].total = state.value[index].price * state.value[index].amount
+                //}
+
+                // else {
+                //     state.value[index].total = state.value[index].total
+                // }
 
 
                 

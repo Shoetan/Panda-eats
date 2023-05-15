@@ -41,11 +41,6 @@ const DisplayCartItems = ({ image, title, price, amount, id }) => {
     }
 
 
-    const show = () => {
-
-        console.log('You are mad')
-      
-    }
 
     const handleTotal =(id) => {
 
@@ -108,7 +103,6 @@ const DisplayCartItems = ({ image, title, price, amount, id }) => {
 
                             handleIncreaseAmount(id)
 
-                            show()
 
                             handleTotal(id)
 
