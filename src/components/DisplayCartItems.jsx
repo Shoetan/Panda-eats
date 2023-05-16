@@ -41,6 +41,7 @@ const DisplayCartItems = ({ image, title, price, amount, id }) => {
     }
 
 
+    //this function will calculate the subtotal of the total property of the objects elements in the array.
 
     const handleTotal = (id) => {
 
@@ -93,12 +94,6 @@ const DisplayCartItems = ({ image, title, price, amount, id }) => {
 
 
                             handleTotal(id)
-
-
-
-
-
-
 
                         }}>
                         <Plus />
