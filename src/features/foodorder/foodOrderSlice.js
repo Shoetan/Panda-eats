@@ -31,6 +31,7 @@ export const foodOrderSlice = createSlice({
 
         },
 
+
         increaseSelectedFoodAmount: (state, action) => {
 
             //destructure id and amount from the payload
@@ -128,4 +129,5 @@ export const foodOrderSlice = createSlice({
 
 
 export const { addSelectedFoodId, clearSelectedFoodId, increaseSelectedFoodAmount, decreaseSelectedFoodAmount, removeSelectedFood, calculateTotalOfSelectedFood, decreaseTotalOfSelectedFood } = foodOrderSlice.actions
+
 export default foodOrderSlice.reducer

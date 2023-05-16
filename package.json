@@ -1,5 +1,4 @@
 {
-  
   "name": "panda-eats",
   "private": true,
   "version": "0.0.0",
@@ -33,5 +32,4 @@
     "tailwindcss": "^3.2.4",
     "vite": "^4.0.0"
   }
-
 }
