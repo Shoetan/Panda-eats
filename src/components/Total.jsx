@@ -1,10 +1,14 @@
 
 import { useEffect, useState } from "react";
-import { useSelector} from "react-redux";
+import { useSelector,useDispatch} from "react-redux";
 import { usePaystackPayment } from "react-paystack";
 
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase/firbase";
+import { clearSelectedFoodId } from "../features/foodorder/foodOrderSlice";
+import { clearCount } from "../features/counter/counterSlice";
+
+
 
 
 
@@ -29,6 +33,8 @@ const Total = () => {
     //Get the array of selected food from the store
 
     const foodsInCheckOut=  useSelector((state) => state.foodSelected.value)
+
+    const dispatch = useDispatch()
 
 
 
@@ -114,6 +120,9 @@ const Total = () => {
                             user?.email ?
                             initializePayment(onSuccess) :
                             alert("Please click on avatar and sign up")
+
+                            dispatch(clearSelectedFoodId())
+                            dispatch(clearCount())
                         }}
                         >
                         Checkout
