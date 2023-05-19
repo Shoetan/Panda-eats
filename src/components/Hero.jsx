@@ -1,4 +1,4 @@
-import food1 from '../assets/food1.png'
+import food7 from '../assets/food7.png'
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -39,7 +39,7 @@ const Hero = () => {
                 
                     {/* Hero Image div */}
                     <div className='flex items-center justify-center md:-mb-16'>
-                        <img src={food1} alt="" className=' w-3/6 lg:w-5/6 md:w-6/6 mb-10  object-cover object-center'/>
+                        <img src={food7} alt="" className=' w-3/6 lg:w-5/6 md:w-6/6 mb-10  object-cover object-center'/>
                     </div>
 
              </div>

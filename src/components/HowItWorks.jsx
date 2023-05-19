@@ -1,6 +1,7 @@
-import location from '../assets/location.png'
+
 import order from '../assets/order.png'
 import delivery from '../assets/delivery.png'
+import signup from '../assets/signup.png'
 
 
 const HowItWorks = () => {
@@ -16,13 +17,13 @@ const HowItWorks = () => {
                 <div className='container mx-auto flex mt-8 p-8 justify-around'>
                 
                 <div className='flex flex-col items-center justify-center hover:scale-125'>
-                    <img src={order} alt="An order confirmation" className='h-12 w-12 md:h-28 md:w-28' />
-                    <h3 className='font-poppins p-4 text-xs font-semibold md:text-sm'>Place your order</h3>
+                    <img src={signup} alt="An order confirmation" className='h-12 w-12 md:h-28 md:w-28' />
+                    <h3 className='font-poppins p-4 text-xs font-semibold md:text-sm'>Sign Up</h3>
                 </div>
                 
-                <div className='flex items-center justify-center flex-col hover:scale-125'>
-                    <img src={location} alt="Pick your location" className='h-12 w-12 md:h-28 md:w-28'/>
-                    <h3 className='font-poppins p-4 text-xs font-semibold md:text-sm'>Pick your location</h3>
+                <div className='flex flex-col items-center justify-center hover:scale-125'>
+                    <img src={order} alt="An order confirmation" className='h-12 w-12 md:h-28 md:w-28' />
+                    <h3 className='font-poppins p-4 text-xs font-semibold md:text-sm'>Place your order</h3>
                 </div>
 
                     <div className='flex flex-col items-center justify-center hover:scale-125'>
