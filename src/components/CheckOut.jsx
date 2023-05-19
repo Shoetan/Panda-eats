@@ -11,8 +11,8 @@ const CheckOut = () => {
     const dispatch = useDispatch()
 
 
-    //import the array containing the id of the food items the user selects from the store 
-    const foodSelection = useSelector((state) => state.foodSelected.value)
+    //get the array containing the id of the food items the user selects from the store 
+    const foodsInCheckOut = useSelector((state) => state.foodSelected.value)
 
 
     return (
@@ -51,7 +51,7 @@ const CheckOut = () => {
                 <div className="">
 
                     {
-                        foodSelection.map(food => {
+                        foodsInCheckOut.map(food => {
                             const { id, title, image, price, amount, total } = food
 
                             return <DisplayCartItems
@@ -75,10 +75,10 @@ const CheckOut = () => {
                 </div>
 
 
-                {/*  Check the length of the food array coming from the store which is called food Id. If it is not zero display the total component that has the total and the checkout button  */}
+                {/*  Check the length of the food array coming from the store. If it is not zero display the total component that has the total and the checkout button  */}
 
                 {
-                    foodSelection.length > 0 ? <Total /> : null
+                    foodsInCheckOut.length > 0 ? <Total /> : null
 
                 }
 

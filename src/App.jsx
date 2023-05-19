@@ -17,25 +17,27 @@ function App () {
   
   return (
 
-    <AnimatePresence>
-        <div className="" >
+  
+      <AnimatePresence>
+          <div className="" >
+      
+              <Header/>
+              <Hero/>
+              <HowItWorks/>
+              <MenuContainer/>
+  
+              {/* The checkout modal will not display if the current state is false and will display if state becomes true */}
+  
+              {
+                checkOutModal ? null : <CheckOut/>
+              }
+              
+              <About/>
+              <Footer/>
+      
+          </div>
+      </AnimatePresence>
     
-            <Header/>
-            <Hero/>
-            <HowItWorks/>
-            <MenuContainer/>
-
-            {/* The checkout modal will not display if the current state is false and will display if state becomes true */}
-
-            {
-              checkOutModal ? null : <CheckOut/>
-            }
-            
-            <About/>
-            <Footer/>
-    
-        </div>
-    </AnimatePresence>
 
   )
 }

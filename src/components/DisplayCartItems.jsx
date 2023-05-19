@@ -63,7 +63,7 @@ const DisplayCartItems = ({ image, title, price, amount, id }) => {
 
                 <div className="">
                     <h2 className="font-poppins text-text_white">{title}</h2>
-                    <span className="font-montserrat text-text_white">$ {price}</span>
+                    <span className="font-montserrat text-text_white">NGN {price}</span>
 
                     <p className="font-montserrat text-text_white mt-4 cursor-pointer" onClick={() => {
 
